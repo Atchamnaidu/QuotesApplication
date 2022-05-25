@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="quoteDetails"
+            type="com.example.quotesapp.model.QuotesData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BEF9F9F9"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/series"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@{quoteDetails.series}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="testassadasd" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{quoteDetails.author}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/quote_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/series"
+            tools:text="testassadasd" />
+
+        <TextView
+            android:id="@+id/quote_id"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@{String.valueOf(quoteDetails.quoteId)}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/author"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{quoteDetails.quote}"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author"
+            tools:text="testassadasd asdgasgdas jhasdhasgdjgasd asvdjghbashdas " />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
